@@ -402,8 +402,7 @@ public class Events implements Listener{
 				Location from = event.getFrom();
 				Location to = event.getTo();
 				if(from.getWorld() != to.getWorld() || from.distance(to) > 2){
-					event.setCancelled(true);
-					event.getPlayer().sendMessage(ChatColor.RED + "[Minigames] " + ChatColor.WHITE + MinigameUtils.getLang("minigame.error.noTeleport"));
+					return;
 				}
 			}
 		}
